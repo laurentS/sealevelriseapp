@@ -18,7 +18,7 @@ function App() {
           <Route exact path="/">
             <Home />
           </Route>
-          <Route exact path="/map/:z/:x/:y">
+          <Route exact path="/map/:zz/:xx/:yy">
             <Map />
           </Route>
           <Route path="*">

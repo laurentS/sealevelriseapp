@@ -1,12 +1,39 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { Map as LeafletMap, TileLayer, Marker, Popup } from "react-leaflet";
 
-const Map = () => {
-  const { z, x, y } = useParams();
+class Map extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      lat: 51.5,
+      lng: 0,
+      zoom: 13,
+    };
+  }
 
-  console.log({ z, x, y });
-
-  return <div>Map</div>;
-};
+  render() {
+    const { state } = this;
+    console.log(this.state);
+    const position = [state.lat, state.lng];
+    return (
+      <div id="container" style={{ width: "100%", height: "400px" }}>
+        <LeafletMap center={position} zoom={state.zoom} maxZoom={18}>
+          <TileLayer
+            attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+            url='https://{s}.tile.osm.org/{z}/{x}/{y}.png'
+          />
+          <TileLayer
+            url='https://d1jpwx71i0x1cy.cloudfront.net/map/50189d72c213112cc6401f423bc9bf31/{z}/{x}/{y}?token=f23c727cb1906b127f462b1c0ec073c4'
+          />
+          <Marker position={position}>
+            <Popup>
+              A pretty CSS3 popup. <br/> Easily customizable.
+            </Popup>
+          </Marker>
+        </LeafletMap>
+      </div>
+    );
+  }
+}
 
 export default Map;

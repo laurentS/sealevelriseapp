@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Redirect } from "react-router-dom";
+
+import "./Home.css";
 
 const fetchPostcodeLatLng = postcode =>
   new Promise(async (resolve, reject) => {
@@ -10,8 +11,8 @@ const fetchPostcodeLatLng = postcode =>
       );
 
       if (!response.ok) {
-        if (response.status === "404") {
-          reject("Not found");
+        if (String(response.status) === "404") {
+          reject("Post Code not found. Please enter a full UK Postcode");
         } else {
           reject("There was an error");
         }
@@ -29,34 +30,43 @@ const fetchPostcodeLatLng = postcode =>
     }
   });
 
-const Home = () => {
+const Home = props => {
   const [term, setTerm] = useState("");
-  const [latLng, setLatLng] = useState({ lat: undefined, lng: undefined });
+  const [error, setError] = useState("");
 
   const onSubmit = async e => {
     e.preventDefault();
 
     try {
-      const latLng = await fetchPostcodeLatLng(term);
+      const { lat, lng } = await fetchPostcodeLatLng(term);
 
-      console.log(latLng);
-      setLatLng(latLng);
+      props.history.push(`/map/14/${lng}/${lat}`);
     } catch (error) {
       console.log(error);
+      setError(error)
     }
   };
-  const { lat, lng } = latLng;
-
-  if (lat && lng) {
-    return <Redirect to={`/map/14/${lat}/${lng}`} />;
-  }
 
   return (
-    <div>
-      Home
-      <form onSubmit={onSubmit}>
-        <input type="text" onChange={e => setTerm(e.target.value)} />
-      </form>
+    <div className="home">
+      <div className="home__postcode-form-container">
+        <form className="home__postcode-form" onSubmit={onSubmit}>
+          <h1 className="home__title">Sea Level Rising</h1>
+          <legend className="home__legend">Enter you post below to see if you are under water.</legend>
+            {error && <div className="home__error-message">{error}</div>}
+          <div className="home__form-inputs">
+            <input
+              className="home__postcode-input"
+              type="text"
+              onChange={e => setTerm(e.target.value)}
+            />
+            <button className="home__submit" type="submit">
+              Go
+            </button>
+          </div>
+        </form>
+      </div>
+      <div className="home__background-image" />
     </div>
   );
 };

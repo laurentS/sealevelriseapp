@@ -18,9 +18,7 @@ function App() {
           <Route exact path="/">
             <Home />
           </Route>
-          <Route exact path="/map/:zz/:xx/:yy">
-            <Map />
-          </Route>
+          <Route exact path="/map/:zoom/:lng/:lat" component={Map} />
           <Route path="*">
             <Redirect to="/" />
           </Route>

@@ -4,19 +4,14 @@ import { Map as LeafletMap, TileLayer, Marker, Popup } from "react-leaflet";
 class Map extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      lat: 51.5,
-      lng: 0,
-      zoom: 13,
-    };
+    this.state = props.match.params;
   }
 
   render() {
     const { state } = this;
-    console.log(this.state);
     const position = [state.lat, state.lng];
     return (
-      <div id="container" style={{ width: "100%", height: "400px" }}>
+      <div id="container">
         <LeafletMap center={position} zoom={state.zoom} maxZoom={18}>
           <TileLayer
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'

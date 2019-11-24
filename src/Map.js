@@ -29,7 +29,10 @@ class Map extends React.Component {
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.osm.org/{z}/{x}/{y}.png"
           />
-          <TileLayer url="https://d1jpwx71i0x1cy.cloudfront.net/map/50189d72c213112cc6401f423bc9bf31/{z}/{x}/{y}?token=f23c727cb1906b127f462b1c0ec073c4" />
+          <TileLayer
+            attribution='<a href="https://climatecentral.org/">Climate Central</a>'
+            url="https://d1jpwx71i0x1cy.cloudfront.net/map/50189d72c213112cc6401f423bc9bf31/{z}/{x}/{y}?token=f23c727cb1906b127f462b1c0ec073c4"
+          />
           <Marker position={position}>
             <Popup>
               A pretty CSS3 popup. <br /> Easily customizable.

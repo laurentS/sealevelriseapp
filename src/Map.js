@@ -9,12 +9,22 @@ class Map extends React.Component {
     this.state = props.match.params;
   }
 
+  onViewportChanged = (vp) => {
+    const newUrl = `/map/${vp.zoom}/${vp.center[1].toFixed(5)}/${vp.center[0].toFixed(5)}`;
+    this.props.history.push(newUrl);
+  }
+
   render() {
     const { state } = this;
     const position = [state.lat, state.lng];
     return (
       <div className="map">
-        <LeafletMap center={position} zoom={state.zoom} maxZoom={18}>
+        <LeafletMap
+          center={position}
+          zoom={state.zoom}
+          maxZoom={18}
+          onViewportChanged={this.onViewportChanged}
+        >
           <TileLayer
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.osm.org/{z}/{x}/{y}.png"

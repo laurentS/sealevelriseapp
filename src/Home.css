@@ -1,0 +1,62 @@
+.home {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.home__title {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.home__legend {
+  margin-bottom: 1rem;
+}
+
+.home__form-inputs {
+  width: 100%;
+  display: flex;
+  align-items: space-between;
+}
+
+.home__error-message {
+  color: red;
+  margin-bottom: 1rem;
+}
+
+.home__postcode-input {
+  width: 100%;
+  margin-right: 0.5rem;
+}
+
+.home__submit {
+  color: white;
+  background-color: #4912ad;
+  border: 0;
+}
+
+.home__postcode-form-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.home__postcode-form {
+  background: white;
+  padding: 1rem;
+}
+
+.home__background-image {
+  position: fixed;
+  background-image: url("https://images.unsplash.com/photo-1496518908709-02b67989c265?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+  background-position: center;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}

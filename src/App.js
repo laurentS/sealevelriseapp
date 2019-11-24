@@ -5,6 +5,7 @@ import {
   Route,
   Redirect
 } from "react-router-dom";
+
 import Home from "./Home";
 import Map from "./Map";
 
@@ -15,9 +16,7 @@ function App() {
     <Router>
       <div>
         <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
+          <Route exact path="/" component={Home} />
           <Route exact path="/map/:zoom/:lng/:lat" component={Map} />
           <Route path="*">
             <Redirect to="/" />

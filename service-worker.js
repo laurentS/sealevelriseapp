@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/sealevelriseapp/precache-manifest.6e35c91f8463d9d59dee04b336300701.js"
+  "/sealevelriseapp/precache-manifest.c821905f9a27cbe2ecf572e1b1361bcd.js"
 );
 
 self.addEventListener('message', (event) => {

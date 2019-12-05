@@ -1,9 +1,19 @@
 /* .leaflet-container seems to be uncontrollable */
 .leaflet-container {
-  height: 100vh;
+  height: 80vh;
   width: 100vw;
 }
 
 .map {
-  min-height: 100vh;
+  min-height: 80vh;
+}
+
+.map-bottom {
+  height: 20vh;
+}
+
+.btm-par {
+  padding: 1em;
+  padding-bottom: .3em;
+  padding-top: .3em;
 }

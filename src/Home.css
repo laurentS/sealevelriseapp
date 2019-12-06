@@ -28,11 +28,12 @@
 .home__postcode-input {
   width: 100%;
   margin-right: 0.5rem;
+  text-transform: uppercase;
 }
 
 .home__submit {
   color: white;
-  background-color: #4912ad;
+  background-color: #006494;
   border: 0;
 }
 
@@ -45,13 +46,14 @@
 }
 
 .home__postcode-form {
-  background: white;
-  padding: 1rem;
+  background: #4392F1;
+  border-radius: 1em;
+  padding: 3rem;
 }
 
 .home__background-image {
   position: fixed;
-  background-image: url("https://images.unsplash.com/photo-1496518908709-02b67989c265?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+  background-image: url("https://images.unsplash.com/photo-1545276070-ec815f01c6ec?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
   background-position: center;
   background-size: cover;
   top: 0;

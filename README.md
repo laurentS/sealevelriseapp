@@ -16,3 +16,5 @@ The app is configured to deploy to github pages. Just run:
 ## Notes
 
 Colour palette: https://coolors.co/4392f1-ffffff-006494-262626-dc493a
+
+Landing page background credits: https://unsplash.com/photos/0PHUAtg_2CQ

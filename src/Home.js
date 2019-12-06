@@ -51,17 +51,18 @@ const Home = props => {
     <div className="home">
       <div className="home__postcode-form-container">
         <form className="home__postcode-form" onSubmit={onSubmit}>
-          <h1 className="home__title">Sea Level Rising</h1>
-          <legend className="home__legend">Enter you post below to see if you are under water.</legend>
+          <h1 className="home__title">Will My House Be Flooded?</h1>
+          <legend className="home__legend">Find out if rising sea levels will affect your home</legend>
             {error && <div className="home__error-message">{error}</div>}
           <div className="home__form-inputs">
             <input
               className="home__postcode-input"
+              placeholder="Postcode"
               type="text"
               onChange={e => setTerm(e.target.value)}
             />
             <button className="home__submit" type="submit">
-              Go
+              Search
             </button>
           </div>
         </form>

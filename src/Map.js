@@ -41,16 +41,10 @@ class Map extends React.Component {
         </LeafletMap>
         <div className="map-bottom">
           <div class="btm-par">
-          The areas highlighted in red are potential flood areas as forecasted for 2030. This is based on recent research published in 2019. In summary, it is expected that these areas are likely to flood on average once a year in 10 years from now. You can find all the scientific details <a href="https://coastal.climatecentral.org">on this page</a> along with options to see forecasts all the way to 2100, and worst case scenarios.
+If you or your family life live in the red zone, you should vote for the candidate who will make a government committed to climate change – or buy some sandbags. The Conservative Government has failed to act on Climate Change, but are on track to win another five years in office.
           </div>
           <div class="btm-par">
-            If your house is in the red areas, this could mean that you will have a hard time insuring your property, or insurers may simply refuse to insure it at all. This will have a major impact on the value of your house, if it is still inhabitable at all.
-          </div>
-          <div class="btm-par">
-            If your house is not in the red area, we suggest you scroll around the UK (and the rest of the world), to get a sense of the extent of the potentially flooded areas. If it looks worrying, it's because it is!
-          </div>
-          <div class="btm-par">
-            The current government has done essentially nothing to address these very real issues, and time to act is running out. Ask your local candidate what they intend to do about climate change now.
+            <a href="https://tactical.vote" target="_blank" rel="noopener noreferrer">Find candidates who will stop the Tories and protect the climate </a>
           </div>
         </div>
       </div>

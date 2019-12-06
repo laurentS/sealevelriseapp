@@ -2,7 +2,7 @@
   "name": "sealevel",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://laurents.github.io/sealevelriseapp",
+  "homepage": "https://willmyhousebeflooded.site",
   "dependencies": {
     "gh-pages": "^2.1.1",
     "leaflet": "^1.6.0",

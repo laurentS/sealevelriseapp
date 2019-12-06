@@ -12,3 +12,7 @@
 The app is configured to deploy to github pages. Just run:
 
 - `npm run deploy`
+
+## Notes
+
+Colour palette: https://coolors.co/4392f1-ffffff-006494-262626-dc493a

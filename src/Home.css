@@ -1,13 +1,17 @@
 .home {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
   padding: 1rem;
 }
 
 .home__title {
   font-size: 1.4rem;
   margin-bottom: 1rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .home__legend {
@@ -17,7 +21,6 @@
 .home__form-inputs {
   width: 100%;
   display: flex;
-  align-items: space-between;
 }
 
 .home__error-message {
@@ -25,16 +28,24 @@
   margin-bottom: 1rem;
 }
 
+.home__warning-emoji {
+  font-size: 2.4rem;
+}
 .home__postcode-input {
   width: 100%;
+  background: #fff;
+  border-radius: 0;
+  height: 2.4rem;
   margin-right: 0.5rem;
-  text-transform: uppercase;
+  padding-left: 0.5rem;
 }
 
 .home__submit {
   color: white;
-  background-color: #006494;
+  background-color: #030303;
   border: 0;
+  font-weight: bold;
+  padding: 0 8px; 
 }
 
 .home__postcode-form-container {
@@ -46,9 +57,10 @@
 }
 
 .home__postcode-form {
-  background: #4392F1;
-  border-radius: 1em;
-  padding: 3rem;
+  background: #f7b500;
+  color: #030303;
+  padding: 1rem;
+  max-width: 380px;
 }
 
 .home__background-image {

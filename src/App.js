@@ -14,15 +14,13 @@ import "./App.css";
 function App() {
   return (
     <Router>
-      <div>
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/map/:zoom/:lng/:lat" component={Map} />
-          <Route path="*">
-            <Redirect to="/" />
-          </Route>
-        </Switch>
-      </div>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/map/:zoom/:lng/:lat" component={Map} />
+        <Route path="*">
+          <Redirect to="/" />
+        </Route>
+      </Switch>
     </Router>
   );
 }

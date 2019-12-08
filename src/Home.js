@@ -14,7 +14,7 @@ const fetchPostcodeLatLng = postcode =>
         if (String(response.status) === "404") {
           reject("Post Code not found. Please enter a full UK Postcode");
         } else {
-          reject("There was an error");
+          reject("Please enter a valid UK postcode ");
         }
       }
 
@@ -51,13 +51,13 @@ const Home = props => {
     <div className="home">
       <div className="home__postcode-form-container">
         <form className="home__postcode-form" onSubmit={onSubmit}>
-          <h1 className="home__title">Will My House Be Flooded?</h1>
+          <h1 className="home__title">Will My House Be Flooded?<span className="home__warning-emoji" role="img">⚠️</span></h1>
           <legend className="home__legend">Find out if rising sea levels will affect your home</legend>
             {error && <div className="home__error-message">{error}</div>}
           <div className="home__form-inputs">
             <input
               className="home__postcode-input"
-              placeholder="Postcode"
+              placeholder="Enter your postcode"
               type="text"
               onChange={e => setTerm(e.target.value)}
             />

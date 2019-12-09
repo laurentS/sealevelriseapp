@@ -36,9 +36,9 @@ const Map = props => {
           attribution='<a href="https://climatecentral.org/">Climate Central</a>'
           maxNativeZoom={11}
           // 2030 - sea level rise + annual floods - moderate cuts - medium luck
-          url="https://d1jpwx71i0x1cy.cloudfront.net/map/5ec03d4c7f9bd9f5c84822a1234834d1/{z}/{x}/{y}" //?token=c6fb3d1a7bd5eff4deada8ec166bc7f9"
+          // url="https://d1jpwx71i0x1cy.cloudfront.net/map/5ec03d4c7f9bd9f5c84822a1234834d1/{z}/{x}/{y}" //?token=c6fb3d1a7bd5eff4deada8ec166bc7f9"
           // 2050 - sea level rise + annual floods - moderate cuts - medium luck
-          // url="https://d1jpwx71i0x1cy.cloudfront.net/map/50189d72c213112cc6401f423bc9bf31/{z}/{x}/{y}" //?token=6122f7f88ea77f6867b52f01ea10bba9"
+          url="https://d1jpwx71i0x1cy.cloudfront.net/map/50189d72c213112cc6401f423bc9bf31/{z}/{x}/{y}" //?token=6122f7f88ea77f6867b52f01ea10bba9"
         />
         <Marker position={position}></Marker>
       </LeafletMap>
@@ -60,7 +60,7 @@ const Map = props => {
           </span>
         </h1>
         <p>
-          The red zone shows the predicted flood levels in 2030, areas that are
+          The red zone shows the predicted flood levels in 2050, areas that are
           expected to flood on average once a year.
           <br />
           (Read the science on{" "}

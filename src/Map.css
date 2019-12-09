@@ -29,16 +29,17 @@
   height: 70%;
 }
 .map__info {
-  position: absolute;
+  position: relative;
   background: #f7b500;
   color: #030303;
   padding: 1rem;
   font-size: 1.6rem;
   bottom: 0;
   left: 0;
-  top: calc(100% - 60px);
-  z-index: 100;
-  height: calc(100vh + 60px);
+  z-index: 999;
+  margin-top: calc(100vh - 60px);
+  margin-top: calc(var(--vh, 1vh) * 100 - 60px);
+
 }
 .map__info-title {
   font-size: 2rem;
@@ -52,10 +53,12 @@
 
 @media screen and (min-width: 768px) {
   .map__info {
+    position: absolute;
     width: 40%;
     padding: 2rem;
     top: auto;
     height: auto;
+    margin-top: 0;
   }
   .map__info-up-arrow {
     display: none;

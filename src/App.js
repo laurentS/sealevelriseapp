@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -10,8 +10,16 @@ import Home from "./Home";
 import Map from "./Map";
 
 import "./App.css";
+import useWindowSize from "./hooks/use-window-size";
 
 function App() {
+  const [, windowHeight] = useWindowSize();
+
+  useEffect(() => {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty("--vh", `${vh}px`);
+  }, [windowHeight]);
+
   return (
     <Router>
       <Switch>

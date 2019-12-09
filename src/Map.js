@@ -34,11 +34,9 @@ const Map = props => {
         />
         <TileLayer
           attribution='<a href="https://climatecentral.org/">Climate Central</a>'
+          minNativeZoom={7}
           maxNativeZoom={11}
-          // 2030 - sea level rise + annual floods - moderate cuts - medium luck
-          // url="https://d1jpwx71i0x1cy.cloudfront.net/map/5ec03d4c7f9bd9f5c84822a1234834d1/{z}/{x}/{y}" //?token=c6fb3d1a7bd5eff4deada8ec166bc7f9"
-          // 2050 - sea level rise + annual floods - moderate cuts - medium luck
-          url="https://d1jpwx71i0x1cy.cloudfront.net/map/50189d72c213112cc6401f423bc9bf31/{z}/{x}/{y}" //?token=6122f7f88ea77f6867b52f01ea10bba9"
+          url="https://ab894ee3.fra1.digitaloceanspaces.com/{z}/{x}/{y}"
         />
         <Marker position={position}></Marker>
       </LeafletMap>

@@ -25,7 +25,7 @@ const Map = props => {
       <LeafletMap
         center={position}
         zoom={zoom}
-        maxZoom={18}
+        maxZoom={15}
         onViewportChanged={onViewportChanged}
       >
         <TileLayer
